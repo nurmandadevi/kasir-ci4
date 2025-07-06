@@ -1,0 +1,1402 @@
+DEBUG - 2025-06-10 00:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 00:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 00:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:43:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:44:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-10 05:44:14 --> mysqli_sql_exception: Incorrect DATE value: 'undefined' in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rin...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rin...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rin...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rin...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelLaporan.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Laporan.php(63): App\Models\ModelLaporan->DataHarian('undefined')
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Laporan->PrintLaporanHarian('undefined')
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-06-10 05:44:14 --> CodeIgniter\Database\Exceptions\DatabaseException: Incorrect DATE value: 'undefined'
+[Method: GET, Route: Laporan/PrintLaporanHarian/undefined]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = :tbl_transaksi.tgl_jual:
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`', [...], false)
+ 2 APPPATH\Models\ModelLaporan.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Laporan.php(63): App\Models\ModelLaporan->DataHarian('undefined')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->PrintLaporanHarian('undefined')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 05:44:14 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Incorrect DATE value: 'undefined'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = \'undefined\'
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = \'undefined\'
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = :tbl_transaksi.tgl_jual:
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`', [...], false)
+ 4 APPPATH\Models\ModelLaporan.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Laporan.php(63): App\Models\ModelLaporan->DataHarian('undefined')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->PrintLaporanHarian('undefined')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 05:44:14 --> [Caused by] mysqli_sql_exception: Incorrect DATE value: 'undefined'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = \'undefined\'
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = \'undefined\'
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = \'undefined\'
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = :tbl_transaksi.tgl_jual:
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`', [...], false)
+ 5 APPPATH\Models\ModelLaporan.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(63): App\Models\ModelLaporan->DataHarian('undefined')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->PrintLaporanHarian('undefined')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 05:45:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-10 05:48:19 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_rinci_transaksi.id_rinci' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelLaporan.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Laporan.php(96): App\Models\ModelLaporan->DataTahunan('06', '2025')
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-06-10 05:48:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_rinci_transaksi.id_rinci' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: Laporan/ViewLaporanBulanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+AND year(tbl_transaksi.tgl_jual) = :year(tbl_transaksi.tgl_jual):
+GROUP BY `tbl_transaksi`.`tgl_jual`', [...], false)
+ 2 APPPATH\Models\ModelLaporan.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Laporan.php(96): App\Models\ModelLaporan->DataTahunan('06', '2025')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 05:48:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_rinci_transaksi.id_rinci' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = \'06\'
+AND year(tbl_transaksi.tgl_jual) = \'2025\'
+GROUP BY `tbl_transaksi`.`tgl_jual`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = \'06\'
+AND year(tbl_transaksi.tgl_jual) = \'2025\'
+GROUP BY `tbl_transaksi`.`tgl_jual`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+AND year(tbl_transaksi.tgl_jual) = :year(tbl_transaksi.tgl_jual):
+GROUP BY `tbl_transaksi`.`tgl_jual`', [...], false)
+ 4 APPPATH\Models\ModelLaporan.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Laporan.php(96): App\Models\ModelLaporan->DataTahunan('06', '2025')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 05:48:19 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_rinci_transaksi.id_rinci' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = \'06\'
+AND year(tbl_transaksi.tgl_jual) = \'2025\'
+GROUP BY `tbl_transaksi`.`tgl_jual`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = \'06\'
+AND year(tbl_transaksi.tgl_jual) = \'2025\'
+GROUP BY `tbl_transaksi`.`tgl_jual`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = \'06\'
+AND year(tbl_transaksi.tgl_jual) = \'2025\'
+GROUP BY `tbl_transaksi`.`tgl_jual`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+AND year(tbl_transaksi.tgl_jual) = :year(tbl_transaksi.tgl_jual):
+GROUP BY `tbl_transaksi`.`tgl_jual`', [...], false)
+ 5 APPPATH\Models\ModelLaporan.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(96): App\Models\ModelLaporan->DataTahunan('06', '2025')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 05:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-10 05:51:42 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_rinci_transaksi.id_rinci' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelLaporan.php(37): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Laporan.php(96): App\Models\ModelLaporan->DataTahunan('06', '2025')
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-06-10 05:51:42 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_rinci_transaksi.id_rinci' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: Laporan/ViewLaporanBulanan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+AND year(tbl_transaksi.tgl_jual) = :year(tbl_transaksi.tgl_jual):
+GROUP BY `tbl_transaksi`.`tgl_jual`', [...], false)
+ 2 APPPATH\Models\ModelLaporan.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Laporan.php(96): App\Models\ModelLaporan->DataTahunan('06', '2025')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 05:51:42 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_rinci_transaksi.id_rinci' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = \'06\'
+AND year(tbl_transaksi.tgl_jual) = \'2025\'
+GROUP BY `tbl_transaksi`.`tgl_jual`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = \'06\'
+AND year(tbl_transaksi.tgl_jual) = \'2025\'
+GROUP BY `tbl_transaksi`.`tgl_jual`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+AND year(tbl_transaksi.tgl_jual) = :year(tbl_transaksi.tgl_jual):
+GROUP BY `tbl_transaksi`.`tgl_jual`', [...], false)
+ 4 APPPATH\Models\ModelLaporan.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Laporan.php(96): App\Models\ModelLaporan->DataTahunan('06', '2025')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 05:51:42 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_rinci_transaksi.id_rinci' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = \'06\'
+AND year(tbl_transaksi.tgl_jual) = \'2025\'
+GROUP BY `tbl_transaksi`.`tgl_jual`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = \'06\'
+AND year(tbl_transaksi.tgl_jual) = \'2025\'
+GROUP BY `tbl_transaksi`.`tgl_jual`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = \'06\'
+AND year(tbl_transaksi.tgl_jual) = \'2025\'
+GROUP BY `tbl_transaksi`.`tgl_jual`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+AND year(tbl_transaksi.tgl_jual) = :year(tbl_transaksi.tgl_jual):
+GROUP BY `tbl_transaksi`.`tgl_jual`', [...], false)
+ 5 APPPATH\Models\ModelLaporan.php(37): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(96): App\Models\ModelLaporan->DataTahunan('06', '2025')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 05:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:56:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 05:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:00:26 --> ErrorException: Undefined variable $tgl
+[Method: GET, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_harian.php on line 20.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_harian.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tgl', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_harian.php', 20)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_harian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_harian', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_harian', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:01:30 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "laporan/v_tabel_laporan_bulanan.php"
+[Method: GET, Route: Laporan/ViewLaporanBulanan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('laporan/v_tabel_laporan_bulanan.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 3 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:02:35 --> ErrorException: Undefined array key "nama_produk"
+[Method: GET, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 37.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_produk"', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 37)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:03:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:04:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:09:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:09:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:11:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-10 06:11:59 --> mysqli_sql_exception: Incorrect DATE value: 'undefined' in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rin...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rin...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rin...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rin...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelLaporan.php(28): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Laporan.php(63): App\Models\ModelLaporan->DataHarian('undefined')
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Laporan->PrintLaporanHarian('undefined')
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-06-10 06:11:59 --> CodeIgniter\Database\Exceptions\DatabaseException: Incorrect DATE value: 'undefined'
+[Method: GET, Route: Laporan/PrintLaporanHarian/undefined]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = :tbl_transaksi.tgl_jual:
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`', [...], false)
+ 2 APPPATH\Models\ModelLaporan.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Laporan.php(63): App\Models\ModelLaporan->DataHarian('undefined')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->PrintLaporanHarian('undefined')
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 06:11:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Incorrect DATE value: 'undefined'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = \'undefined\'
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = \'undefined\'
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = :tbl_transaksi.tgl_jual:
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`', [...], false)
+ 4 APPPATH\Models\ModelLaporan.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Laporan.php(63): App\Models\ModelLaporan->DataHarian('undefined')
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->PrintLaporanHarian('undefined')
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 06:11:59 --> [Caused by] mysqli_sql_exception: Incorrect DATE value: 'undefined'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = \'undefined\'
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = \'undefined\'
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = \'undefined\'
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`, SUM(`tbl_rinci_transaksi`.`qty`) AS `qty`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_produk` ON `tbl_produk`.`kode_produk`=`tbl_rinci_transaksi`.`kode_produk`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE `tbl_transaksi`.`tgl_jual` = :tbl_transaksi.tgl_jual:
+GROUP BY `tbl_rinci_transaksi`.`kode_produk`, `tbl_produk`.`nama_produk`, `tbl_rinci_transaksi`.`modal`, `tbl_rinci_transaksi`.`harga`', [...], false)
+ 5 APPPATH\Models\ModelLaporan.php(28): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(63): App\Models\ModelLaporan->DataHarian('undefined')
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->PrintLaporanHarian('undefined')
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:47:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:47:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:47:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:51:42 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:51:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:51:43 --> ErrorException: Undefined variable $tgl
+[Method: GET, Route: Laporan/PrintLaporanBulanan/6/2025]
+in APPPATH\Views\laporan\v_print_lap_harian.php on line 2.
+ 1 APPPATH\Views\laporan\v_print_lap_harian.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tgl', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_print_lap_harian.php', 2)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_print_lap_harian.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_print_lap_harian', [], true)
+ 5 APPPATH\Views\laporan\v_template_print_laporan.php(41): view('laporan/v_print_lap_harian')
+ 6 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_template_print_laporan.php')
+ 7 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_template_print_laporan', [], true)
+ 9 APPPATH\Controllers\Laporan.php(108): view('laporan/v_template_print_laporan', [...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->PrintLaporanBulanan('6', '2025')
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+16 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:52:38 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:52:40 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:52:40 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:52:41 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:52:41 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:52:41 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:52:41 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:52:41 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:52:41 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:53:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:53:02 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 06:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 06:53:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 06:53:13 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:02:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:02:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 07:02:56 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 07:02:57 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 07:02:57 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 07:02:58 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 07:02:58 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 07:02:58 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 07:02:58 --> ErrorException: Undefined variable $databulanan
+[Method: POST, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:03:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 07:03:06 --> ErrorException: Undefined variable $databulanan
+[Method: GET, Route: Laporan/ViewLaporanBulanan]
+in APPPATH\Views\laporan\v_tabel_laporan_bulanan.php on line 29.
+ 1 APPPATH\Views\laporan\v_tabel_laporan_bulanan.php(29): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $databulanan', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php', 29)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\laporan\\v_tabel_laporan_bulanan.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_tabel_laporan_bulanan', [], true)
+ 5 APPPATH\Controllers\Laporan.php(93): view('laporan/v_tabel_laporan_bulanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanBulanan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:09:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:09:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:25:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-06-10 07:25:54 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "laporan/v_laporan_tahunan.php"
+[Method: GET, Route: Laporan/LaporanTahunan]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('laporan/v_laporan_tahunan.php')
+ 2 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('laporan/v_laporan_tahunan', [], true)
+ 3 APPPATH\Views\v_template.php(256): view('laporan/v_laporan_tahunan')
+ 4 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\v_template.php')
+ 5 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('v_template', [], true)
+ 7 APPPATH\Controllers\Laporan.php(121): view('v_template', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->LaporanTahunan()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:27:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:27:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:28:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:28:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:31:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-10 07:31:22 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_tra...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_tra...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_tra...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_tra...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-06-10 07:31:22 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: Laporan/ViewLaporanTahunan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 2 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:31:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 4 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:31:22 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 5 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:31:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-10 07:31:48 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_tra...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_tra...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_tra...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_tra...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-06-10 07:31:48 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: Laporan/ViewLaporanTahunan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 2 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:31:48 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 4 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:31:48 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 5 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-10 07:31:50 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_tra...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_tra...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_tra...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_tra...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-06-10 07:31:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: Laporan/ViewLaporanTahunan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 2 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:31:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 4 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:31:50 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 5 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-10 07:31:50 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_tra...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_tra...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_tra...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_tra...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-06-10 07:31:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: Laporan/ViewLaporanTahunan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 2 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:31:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 4 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:31:50 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 5 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-10 07:31:51 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_tra...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_tra...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_tra...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_tra...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-06-10 07:31:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: Laporan/ViewLaporanTahunan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 2 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:31:51 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 4 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:31:51 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE month(tbl_transaksi.tgl_jual) = :month(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 5 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:40:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-06-10 07:40:56 --> mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_tra...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_tra...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_tra...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_tra...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-06-10 07:40:56 --> CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+[Method: GET, Route: Laporan/ViewLaporanTahunan]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE year(tbl_transaksi.tgl_jual) = :year(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 2 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:40:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE year(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE year(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE year(tbl_transaksi.tgl_jual) = :year(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 4 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-06-10 07:40:56 --> [Caused by] mysqli_sql_exception: Expression #1 of SELECT list is not in GROUP BY clause and contains nonaggregated column 'db_hikam_mart.tbl_transaksi.tgl_jual' which is not functionally dependent on columns in GROUP BY clause; this is incompatible with sql_mode=only_full_group_by
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE year(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE year(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE year(tbl_transaksi.tgl_jual) = 2025
+GROUP BY month(tbl_transaksi.tgl_jual)')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT `tbl_transaksi`.`tgl_jual`, SUM(`tbl_rinci_transaksi`.`total_harga`) AS `total_harga`, SUM(`tbl_rinci_transaksi`.`untung`) AS `untung`
+FROM `tbl_rinci_transaksi`
+JOIN `tbl_transaksi` ON `tbl_transaksi`.`no_faktur`=`tbl_rinci_transaksi`.`no_faktur`
+WHERE year(tbl_transaksi.tgl_jual) = :year(tbl_transaksi.tgl_jual):
+GROUP BY month(tbl_transaksi.tgl_jual)', [...], false)
+ 5 APPPATH\Models\ModelLaporan.php(51): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Laporan.php(137): App\Models\ModelLaporan->DataTahunan(2025)
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Laporan->ViewLaporanTahunan()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Laporan))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-06-10 07:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:46:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:49:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 07:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 09:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 09:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 09:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 12:56:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 12:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 12:57:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 12:57:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-06-10 12:57:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
