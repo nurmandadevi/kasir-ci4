@@ -5,6 +5,7 @@ namespace App\Controllers;
 use App\Controllers\BaseController;
 use CodeIgniter\HTTP\ResponseInterface;
 use App\Models\ModelTransaksi;
+// use App\Models\ModelMember;
 
 class Transaksi extends BaseController
 {
@@ -22,6 +23,7 @@ class Transaksi extends BaseController
             'cart' => $cart->contents(),
             'grand_total' => $cart->total(),
             'produk' => $this->ModelTransaksi->AllProduk(),
+            'member' => $this->ModelTransaksi->AllMember(),
         ];
         return view('v_transaksi', $data);
     }
@@ -48,6 +50,26 @@ class Transaksi extends BaseController
         }
         echo json_encode($data);
     }
+    public function CekMember()
+    {
+        $kode_member = $this->request->getPost('kode_member');
+        $member = $this->ModelTransaksi->CekMember($kode_member);
+
+        if (!$member) {
+            $data = [
+                'nama_member' => '',
+                'alamat' => ''
+            ];
+        } else {
+            $data = [
+                'nama_member' => $member['nama_member'],
+                'alamat' => $member['alamat']
+            ];
+        }
+
+        return $this->response->setJSON($data);
+    }
+
     public function InsertCart()
     {
         $cart = \Config\Services::cart();

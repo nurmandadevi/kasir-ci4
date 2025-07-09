@@ -99,7 +99,9 @@ class Filters extends BaseFilters
                     'User','User/*',
                     'Laporan','Laporan/*',
                     'Member','Member/*',
-                    'Hadiah','Hadiah/*'
+                    'Hadiah','Hadiah/*',
+                    'Poin','Poin/*',
+                    'TukarPoin','TukarPoin/*',
                 ]
             ]
         ],

@@ -185,6 +185,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <a class="btn btn-flat btn-success" data-toggle="modal" data-target="#pembayaran" onclick="Pembayaran()"><i class="fas fa-cash-register"></i> Pembayaran</a>
                                             </div>
                                         </div>
+                                        <div class="row mt-2">
+                                            <div class="col-2 input-group">
+                                                <input name="kode_member" id="kode_member" class="form-control" placeholder="Kode Member" autocomplete="off">
+                                                <span class="input-group-append">
+                                                    <a class="btn btn-primary btn-flat" data-toggle="modal" data-target="#cari-member">
+                                                        <i class="fas fa-search"></i>
+                                                    </a>
+                                                    <button type="reset" class="btn btn-danger btn-flat">
+                                                        <i class="fas fa-times"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <div class="col-3">
+                                                <input name="nama_member" id="nama_member" class="form-control" placeholder="Nama Member" readonly>
+                                            </div>
+                                        </div>
                                         <?php echo form_close() ?>
                                     </div>
                                 </div>
@@ -286,6 +302,50 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <td><?= $value['stok'] ?></td>
                                         <td>
                                             <button onclick="PilihProduk(<?= $value['kode_produk'] ?>)" class="btn btn-success btn-xs">Pilih</button>
+                                        </td>
+                                    </tr>
+                                <?php } ?>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+            <!-- /.modal-dialog -->
+        </div>
+        <!-- /.modal -->
+
+        <!-- /.modal-pencarian member -->
+        <div class="modal fade" id="cari-member">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Pencarian Data Member</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <table id="example2" class="table table-bordered table-striped text-sm">
+                            <thead>
+                                <tr>
+                                    <th>No</th>
+                                    <th>Kode Member</th>
+                                    <th>Nama Member</th>
+                                    <th>Alamat</th>
+                                    <th>Aksi</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php $no = 1;
+                                foreach ($member as $key => $value) { ?>
+                                    <tr>
+                                        <td><?= $no++ ?></td>
+                                        <td><?= $value['kode_member'] ?></td>
+                                        <td><?= $value['nama_member'] ?></td>
+                                        <td><?= $value['alamat'] ?></td>
+                                        <td>
+                                            <button onclick="PilihMember('<?= $value['kode_member'] ?>','<?= $value['nama_member'] ?>')" class="btn btn-success btn-xs">Pilih</button>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -430,6 +490,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
             CekProduk();
         }
 
+        function PilihMember(kode_member, nama_member) {
+            $('#kode_member').val(kode_member);
+            $('#nama_member').val(nama_member);
+            $('#cari-member').modal('hide');
+            CekMember();
+        }
+
+
         function Pembayaran() {
             $('#pembayaran').modal('show');
         }
@@ -454,6 +522,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
         }
     </script>
     <script>
+        function CekMember() {
+            let kode_member = $('#kode_member').val();
+
+            if (kode_member == '') {
+                Swal.fire('Kode Member belum diisi!');
+            } else {
+                $.ajax({
+                    type: 'POST',
+                    url: "<?= base_url('Transaksi/CekMember') ?>",
+                    data: {
+                        kode_member: kode_member
+                    },
+                    dataType: 'JSON',
+                    success: function(response) {
+                        if (response.nama_member == '') {
+                            Swal.fire('Member tidak ditemukan!');
+                            $('#nama_member').val('');
+                        } else {
+                            $('#nama_member').val(response.nama_member);
+                        }
+                    }
+                });
+            }
+        }
+    </script>
+
+    <script>
         $(function() {
             $("#example1").DataTable({
                 "responsive": true,
@@ -465,6 +560,19 @@ scratch. This page gets rid of all links and provides the needed markup only.
             }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
         });
     </script>
+    <script>
+        $(function() {
+            $("#example2").DataTable({
+                "responsive": true,
+                "lengthChange": true,
+                "autoWidth": false,
+                "paging": true,
+                "info": true,
+                "ordering": false,
+            }).buttons().container().appendTo('#example2_wrapper .col-md-6:eq(0)');
+        });
+    </script>
+
 
     <script>
         window.onload = function() {

@@ -93,7 +93,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="#" class="brand-link">
                 <img src="<?= base_url('Gambar/logo hikamMart.png') ?>" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">Hikam Mart</span>
             </a>
@@ -223,7 +223,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                         <p>Poin</p>
                                     </a>
                                 </li>
-
+                                <li class="nav-item">
+                                    <a href="<?= base_url('TukarPoin') ?>" class="nav-link <?= $submenu == 'tukarpoin' ? 'active' : '' ?>">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Tukar Poin</p>
+                                    </a>
+                                </li>
                                 <li class="nav-item">
                                     <a href="<?= base_url('Hadiah') ?>" class="nav-link <?= $submenu == 'hadiah' ? 'active' : '' ?>">
                                         <i class="far fa-circle nav-icon"></i>
