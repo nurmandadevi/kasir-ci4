@@ -1,0 +1,942 @@
+DEBUG - 2025-07-10 08:44:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 08:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 08:44:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 08:48:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:48:25 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:52:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 08:52:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:52:15 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:52:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 08:52:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 08:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:52:31 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:52:31 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:52:40 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:52:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:52:40 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:55:07 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 08:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:55:27 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:55:27 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:55:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 08:55:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:55:44 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:55:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:55:45 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 08:56:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 08:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:56:29 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:56:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:56:30 --> Cart Class Initialized
+DEBUG - 2025-07-10 08:56:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 08:56:36 --> Cart Class Initialized
+CRITICAL - 2025-07-10 08:57:48 --> ParseError: syntax error, unexpected variable "$poin"
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 119.
+ 1 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouter->getRoute('Transaksi/SimpanTransaksi', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('Transaksi/SimpanTransaksi')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('Transaksi/SimpanTransaksi')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 08:59:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:00:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:06:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:06:07 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:06:22 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:06:22 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:10:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:10:27 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:10:45 --> Cart Class Initialized
+ERROR - 2025-07-10 09:10:45 --> An invalid name was submitted as the product name:  The name can only contain alpha-numeric characters, dashes, underscores, colons, and spaces
+DEBUG - 2025-07-10 09:10:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:10:45 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:11:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:11:09 --> Cart Class Initialized
+WARNING - 2025-07-10 09:11:09 --> [DEPRECATED] str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in APPPATH\Controllers\Transaksi.php on line 114.
+ 1 APPPATH\Controllers\Transaksi.php(114): str_replace(',', '', null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+WARNING - 2025-07-10 09:11:09 --> [DEPRECATED] str_replace(): Passing null to parameter #3 ($subject) of type array|string is deprecated in APPPATH\Controllers\Transaksi.php on line 115.
+ 1 APPPATH\Controllers\Transaksi.php(115): str_replace(',', '', null)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 09:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:11:17 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:11:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:11:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:11:43 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:11:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:11:43 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:11:51 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:12:07 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:13:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:13:56 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:14:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:14:13 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:14:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:14:31 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:14:38 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:18:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:18:05 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:18:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:18:07 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:18:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:18:09 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:18:15 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:18:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:18:15 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:18:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:18:27 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:18:28 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:18:36 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:19:23 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:19:37 --> Cart Class Initialized
+CRITICAL - 2025-07-10 09:19:37 --> ErrorException: Undefined variable $kode_member
+[Method: GET, Route: Transaksi/insertcart]
+in APPPATH\Controllers\Transaksi.php on line 88.
+ 1 APPPATH\Controllers\Transaksi.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kode_member', 'C:\\laragon\\www\\kasir-ci4\\app\\Controllers\\Transaksi.php', 88)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->InsertCart()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 09:21:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:21:37 --> Cart Class Initialized
+CRITICAL - 2025-07-10 09:21:37 --> ErrorException: Undefined variable $kode_member
+[Method: GET, Route: Transaksi]
+in APPPATH\Views\v_transaksi.php on line 390.
+ 1 APPPATH\Views\v_transaksi.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kode_member', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\v_transaksi.php', 390)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\v_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('v_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(28): view('v_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 09:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:22:01 --> Cart Class Initialized
+CRITICAL - 2025-07-10 09:22:01 --> ErrorException: Undefined variable $kode_member
+[Method: GET, Route: Transaksi]
+in APPPATH\Views\v_transaksi.php on line 390.
+ 1 APPPATH\Views\v_transaksi.php(390): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $kode_member', 'C:\\laragon\\www\\kasir-ci4\\app\\Views\\v_transaksi.php', 390)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\laragon\\www\\kasir-ci4\\app\\Views\\v_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1173): CodeIgniter\View\View->render('v_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(28): view('v_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 09:26:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:26:52 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:26:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:26:55 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:27:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:27:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:27:14 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:27:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:27:14 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:27:27 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:27:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:27:27 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:27:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:27:38 --> Cart Class Initialized
+ERROR - 2025-07-10 09:27:38 --> Invalid product ID.  The product ID can only contain alpha-numeric characters, dashes, and underscores
+DEBUG - 2025-07-10 09:27:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:27:39 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:27:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:27:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:27:56 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:27:56 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:27:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:28:05 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:28:23 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:28:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:28:24 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:30:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:30:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:30:02 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:30:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:30:03 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:30:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:30:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:30:11 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:31:13 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:31:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:31:13 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:31:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:31:56 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:31:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:31:56 --> Cart Class Initialized
+DEBUG - 2025-07-10 09:32:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 09:32:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:32:07 --> Cart Class Initialized
+CRITICAL - 2025-07-10 09:32:07 --> ErrorException: Undefined property: App\Controllers\Transaksi::$db
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 162.
+ 1 APPPATH\Controllers\Transaksi.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Transaksi::$db', 'C:\\laragon\\www\\kasir-ci4\\app\\Controllers\\Transaksi.php', 162)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 09:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 09:42:56 --> Cart Class Initialized
+CRITICAL - 2025-07-10 09:42:56 --> ErrorException: Undefined property: App\Controllers\Transaksi::$db
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 162.
+ 1 APPPATH\Controllers\Transaksi.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Transaksi::$db', 'C:\\laragon\\www\\kasir-ci4\\app\\Controllers\\Transaksi.php', 162)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 10:04:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-10 10:04:13 --> Error: Class "App\Controllers\Database" not found
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Transaksi->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 10:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-07-10 10:04:35 --> Error: Class "App\Controllers\Database" not found
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(903): App\Controllers\Transaksi->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(498): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 10:05:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:05:01 --> Cart Class Initialized
+CRITICAL - 2025-07-10 10:05:01 --> ErrorException: Undefined property: App\Controllers\Transaksi::$db
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 162.
+ 1 APPPATH\Controllers\Transaksi.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Transaksi::$db', 'C:\\laragon\\www\\kasir-ci4\\app\\Controllers\\Transaksi.php', 162)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 10:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:08:52 --> Cart Class Initialized
+CRITICAL - 2025-07-10 10:08:52 --> ErrorException: Undefined property: App\Controllers\Transaksi::$ModelMember
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 159.
+ 1 APPPATH\Controllers\Transaksi.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Transaksi::$ModelMember', 'C:\\laragon\\www\\kasir-ci4\\app\\Controllers\\Transaksi.php', 159)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 10:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:09:24 --> Cart Class Initialized
+CRITICAL - 2025-07-10 10:09:24 --> ErrorException: Undefined property: App\Controllers\Transaksi::$ModelMember
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 159.
+ 1 APPPATH\Controllers\Transaksi.php(159): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Transaksi::$ModelMember', 'C:\\laragon\\www\\kasir-ci4\\app\\Controllers\\Transaksi.php', 159)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 10:10:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:10:36 --> Cart Class Initialized
+DEBUG - 2025-07-10 10:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:12:22 --> Cart Class Initialized
+DEBUG - 2025-07-10 10:12:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:12:29 --> Cart Class Initialized
+DEBUG - 2025-07-10 10:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:12:43 --> Cart Class Initialized
+DEBUG - 2025-07-10 10:17:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:17:16 --> Cart Class Initialized
+CRITICAL - 2025-07-10 10:17:16 --> ErrorException: Undefined property: App\Controllers\Transaksi::$db
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 163.
+ 1 APPPATH\Controllers\Transaksi.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Transaksi::$db', 'C:\\laragon\\www\\kasir-ci4\\app\\Controllers\\Transaksi.php', 163)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-07-10 10:20:47 --> ParseError: syntax error, unexpected token "}"
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 164.
+ 1 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouter->getRoute('Transaksi/SimpanTransaksi', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('Transaksi/SimpanTransaksi')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('Transaksi/SimpanTransaksi')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 10:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:20:59 --> Cart Class Initialized
+DEBUG - 2025-07-10 10:20:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:20:59 --> Cart Class Initialized
+DEBUG - 2025-07-10 10:23:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 10:23:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 10:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:23:52 --> Cart Class Initialized
+DEBUG - 2025-07-10 10:23:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:23:52 --> Cart Class Initialized
+DEBUG - 2025-07-10 10:25:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 10:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 10:26:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 10:26:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 10:26:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 10:26:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 10:26:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 10:26:44 --> Cart Class Initialized
+DEBUG - 2025-07-10 11:16:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 11:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 11:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 11:19:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 11:21:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 12:01:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 12:01:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 12:03:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 12:03:02 --> Cart Class Initialized
+DEBUG - 2025-07-10 12:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 12:57:05 --> Cart Class Initialized
+DEBUG - 2025-07-10 12:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 12:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 12:57:20 --> Cart Class Initialized
+DEBUG - 2025-07-10 12:57:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 12:57:20 --> Cart Class Initialized
+DEBUG - 2025-07-10 12:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 12:57:31 --> Cart Class Initialized
+ERROR - 2025-07-10 12:57:31 --> Update poin gagal untuk member 
+DEBUG - 2025-07-10 12:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 12:57:31 --> Cart Class Initialized
+DEBUG - 2025-07-10 12:58:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 12:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 12:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 12:58:28 --> Cart Class Initialized
+DEBUG - 2025-07-10 12:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 12:58:28 --> Cart Class Initialized
+DEBUG - 2025-07-10 12:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 12:58:35 --> Cart Class Initialized
+ERROR - 2025-07-10 12:58:35 --> Update poin gagal untuk member 
+DEBUG - 2025-07-10 12:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 12:58:35 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:39:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:39:36 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:39:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:39:41 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:39:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:39:41 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:39:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:39:51 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:39:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:39:51 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:39:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:40:21 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:40:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:40:21 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:42:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:42:06 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:42:11 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:42:12 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:42:21 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:57:44 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:57:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:57:44 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:58:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:58:12 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:58:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:58:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:58:32 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:58:32 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:58:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:58:44 --> Cart Class Initialized
+ERROR - 2025-07-10 13:58:44 --> Update poin gagal untuk member 0001
+DEBUG - 2025-07-10 13:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:58:44 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:59:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:59:24 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:59:24 --> Cart Class Initialized
+DEBUG - 2025-07-10 13:59:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 13:59:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:59:34 --> Cart Class Initialized
+ERROR - 2025-07-10 13:59:34 --> Update poin gagal untuk member 0001
+DEBUG - 2025-07-10 13:59:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 13:59:35 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:00:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:00:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:00:38 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:00:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:00:39 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:00:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:00:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:00:49 --> Cart Class Initialized
+CRITICAL - 2025-07-10 14:02:45 --> ParseError: syntax error, unexpected token ")", expecting "("
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 158.
+ 1 SYSTEMPATH\Router\Router.php(567): CodeIgniter\Router\AutoRouter->getRoute('Transaksi/SimpanTransaksi', 'POST')
+ 2 SYSTEMPATH\Router\Router.php(231): CodeIgniter\Router\Router->autoRoute('Transaksi/SimpanTransaksi')
+ 3 SYSTEMPATH\CodeIgniter.php(832): CodeIgniter\Router\Router->handle('Transaksi/SimpanTransaksi')
+ 4 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 14:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:03:11 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:03:23 --> Cart Class Initialized
+ERROR - 2025-07-10 14:03:23 --> Update poin gagal untuk member 0001
+DEBUG - 2025-07-10 14:03:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:03:23 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:04:45 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:04:45 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:04:55 --> Cart Class Initialized
+ERROR - 2025-07-10 14:04:55 --> Update poin gagal untuk member 0004
+DEBUG - 2025-07-10 14:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:04:55 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:10:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:10:49 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:12:52 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:14:08 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:18:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:18:38 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:19:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:19:13 --> Cart Class Initialized
+ERROR - 2025-07-10 14:19:13 --> Update poin gagal untuk member 0004
+DEBUG - 2025-07-10 14:19:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:19:14 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:21:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:21:54 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:21:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:21:59 --> Cart Class Initialized
+CRITICAL - 2025-07-10 14:21:59 --> ErrorException: Undefined variable $total
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 157.
+ 1 APPPATH\Controllers\Transaksi.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $total', 'C:\\laragon\\www\\kasir-ci4\\app\\Controllers\\Transaksi.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 14:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:22:37 --> Cart Class Initialized
+ERROR - 2025-07-10 14:22:37 --> Update poin gagal untuk member 
+ERROR - 2025-07-10 14:22:37 --> Update poin gagal untuk member 
+DEBUG - 2025-07-10 14:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:22:38 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:24:05 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:24:08 --> Cart Class Initialized
+ERROR - 2025-07-10 14:24:08 --> Invalid product ID.  The product ID can only contain alpha-numeric characters, dashes, and underscores
+DEBUG - 2025-07-10 14:24:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:24:08 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:24:14 --> Cart Class Initialized
+ERROR - 2025-07-10 14:24:14 --> Update poin gagal untuk member 
+DEBUG - 2025-07-10 14:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:24:14 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:24:20 --> Cart Class Initialized
+ERROR - 2025-07-10 14:24:20 --> Update poin gagal untuk member 
+DEBUG - 2025-07-10 14:24:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:24:20 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:25:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:25:02 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:25:06 --> Cart Class Initialized
+ERROR - 2025-07-10 14:25:06 --> Update poin gagal untuk member 
+ERROR - 2025-07-10 14:25:06 --> Update poin gagal untuk member 
+DEBUG - 2025-07-10 14:25:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:25:06 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:25:26 --> Cart Class Initialized
+ERROR - 2025-07-10 14:25:26 --> Update poin gagal untuk member 
+DEBUG - 2025-07-10 14:25:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:25:26 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:26:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:26:26 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:26:31 --> Cart Class Initialized
+ERROR - 2025-07-10 14:26:31 --> Update poin gagal untuk member 
+ERROR - 2025-07-10 14:26:31 --> Update poin gagal untuk member 
+DEBUG - 2025-07-10 14:26:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:26:31 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:27:36 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:27:41 --> Cart Class Initialized
+ERROR - 2025-07-10 14:27:41 --> Update poin gagal untuk member 
+ERROR - 2025-07-10 14:27:41 --> Update poin gagal untuk member 
+DEBUG - 2025-07-10 14:27:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:27:41 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:32:36 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:32:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:33:03 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:33:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:33:03 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:33:08 --> Cart Class Initialized
+ERROR - 2025-07-10 14:33:08 --> Update poin gagal untuk member 
+DEBUG - 2025-07-10 14:33:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:33:08 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:34:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:34:07 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:34:12 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:34:12 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:34:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:34:30 --> Cart Class Initialized
+ERROR - 2025-07-10 14:34:30 --> Update poin gagal untuk member 0001
+DEBUG - 2025-07-10 14:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:34:31 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:37:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:37:34 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:37:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:37:34 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:38:32 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:38:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:38:32 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:39:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:39:32 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:41:36 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:41:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:41:47 --> Cart Class Initialized
+ERROR - 2025-07-10 14:41:47 --> Invalid product ID.  The product ID can only contain alpha-numeric characters, dashes, and underscores
+DEBUG - 2025-07-10 14:41:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:41:48 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:41:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:41:53 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:41:53 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:42:10 --> Cart Class Initialized
+ERROR - 2025-07-10 14:42:10 --> Update poin gagal untuk member 0002
+DEBUG - 2025-07-10 14:42:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 14:42:11 --> Cart Class Initialized
+DEBUG - 2025-07-10 14:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:43:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:53:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:53:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:54:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:54:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-10 14:54:09 --> mysqli_sql_exception: Table 'db_hikam_mart.tbl_poin' doesn't exist in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelPoin.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Poin.php(28): App\Models\ModelPoin->GetAllWithMember()
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Poin->index()
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poin))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-07-10 14:54:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_hikam_mart.tbl_poin' doesn't exist
+[Method: GET, Route: Poin]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`', [], false)
+ 2 APPPATH\Models\ModelPoin.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Poin.php(28): App\Models\ModelPoin->GetAllWithMember()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poin->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poin))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-07-10 14:54:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Table 'db_hikam_mart.tbl_poin' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`', [], false)
+ 4 APPPATH\Models\ModelPoin.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Poin.php(28): App\Models\ModelPoin->GetAllWithMember()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-07-10 14:54:09 --> [Caused by] mysqli_sql_exception: Table 'db_hikam_mart.tbl_poin' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`', [], false)
+ 5 APPPATH\Models\ModelPoin.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Poin.php(28): App\Models\ModelPoin->GetAllWithMember()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poin->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poin))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 14:55:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-07-10 14:55:01 --> mysqli_sql_exception: Unknown column 'tbl_poin.id_member' in 'on clause' in C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\laragon\www\kasir-ci4\system\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\kasir-ci4\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\kasir-ci4\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\kasir-ci4\app\Models\ModelPoin.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\kasir-ci4\app\Controllers\Poin.php(28): App\Models\ModelPoin->GetAllWithMember()
+#6 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(933): App\Controllers\Poin->index()
+#7 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poin))
+#8 C:\laragon\www\kasir-ci4\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\laragon\www\kasir-ci4\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#10 C:\laragon\www\kasir-ci4\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\laragon\www\kasir-ci4\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 C:\laragon\www\kasir-ci4\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#13 {main}
+CRITICAL - 2025-07-10 14:55:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_poin.id_member' in 'on clause'
+[Method: GET, Route: Poin]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_histori_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`', [], false)
+ 2 APPPATH\Models\ModelPoin.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Poin.php(28): App\Models\ModelPoin->GetAllWithMember()
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poin->index()
+ 5 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poin))
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-07-10 14:55:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_poin.id_member' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_histori_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_histori_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_histori_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`', [], false)
+ 4 APPPATH\Models\ModelPoin.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Poin.php(28): App\Models\ModelPoin->GetAllWithMember()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poin))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+CRITICAL - 2025-07-10 14:55:01 --> [Caused by] mysqli_sql_exception: Unknown column 'tbl_poin.id_member' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('SELECT *
+FROM `tbl_histori_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_histori_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_histori_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_histori_poin`
+LEFT JOIN `tbl_member` ON `tbl_member`.`id_member` = `tbl_poin`.`id_member`', [], false)
+ 5 APPPATH\Models\ModelPoin.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Poin.php(28): App\Models\ModelPoin->GetAllWithMember()
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Poin->index()
+ 8 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Poin))
+ 9 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+13 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 14:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 14:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:05:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:06:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:20:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:23:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:34:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:34:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:34:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:34:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:35:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:35:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:35:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:42:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:42:35 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:42:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:42:42 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:42:43 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:42:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:42:53 --> Cart Class Initialized
+CRITICAL - 2025-07-10 15:42:53 --> ErrorException: Undefined property: App\Controllers\Transaksi::$db
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 157.
+ 1 APPPATH\Controllers\Transaksi.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Transaksi::$db', 'C:\\laragon\\www\\kasir-ci4\\app\\Controllers\\Transaksi.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 15:49:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:49:35 --> Cart Class Initialized
+CRITICAL - 2025-07-10 15:49:35 --> ErrorException: Undefined variable $data
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Models\ModelTransaksi.php on line 73.
+ 1 APPPATH\Models\ModelTransaksi.php(73): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\laragon\\www\\kasir-ci4\\app\\Models\\ModelTransaksi.php', 73)
+ 2 APPPATH\Controllers\Transaksi.php(167): App\Models\ModelTransaksi->InsertHistoriPoin([...])
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 9 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 15:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:50:35 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:50:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:50:35 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:51:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:51:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:51:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:51:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:51:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:52:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:52:01 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:52:08 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:52:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:52:09 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:52:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:52:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:52:17 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:52:18 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:52:38 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:52:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:52:38 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:52:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:52:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:52:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:53:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:53:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:53:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:53:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:53:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:53:51 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:53:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:53:56 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:53:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:53:56 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:54:08 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:54:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:54:08 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:54:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:54:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:54:33 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:54:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:54:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:54:46 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:54:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:54:46 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:55:07 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:55:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 15:55:07 --> Cart Class Initialized
+DEBUG - 2025-07-10 15:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:55:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:55:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:55:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:57:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:59:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 15:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:10:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:10:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 16:11:24 --> Cart Class Initialized
+DEBUG - 2025-07-10 16:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 16:11:28 --> Cart Class Initialized
+DEBUG - 2025-07-10 16:11:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 16:11:29 --> Cart Class Initialized
+DEBUG - 2025-07-10 16:11:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 16:11:44 --> Cart Class Initialized
+CRITICAL - 2025-07-10 16:11:44 --> ErrorException: Undefined variable $id_member
+[Method: POST, Route: Transaksi/SimpanTransaksi]
+in APPPATH\Controllers\Transaksi.php on line 161.
+ 1 APPPATH\Controllers\Transaksi.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_member', 'C:\\laragon\\www\\kasir-ci4\\app\\Controllers\\Transaksi.php', 161)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Transaksi->SimpanTransaksi()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 8 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\kasir-ci4\\public\\index.php')
+DEBUG - 2025-07-10 16:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 16:12:03 --> Cart Class Initialized
+DEBUG - 2025-07-10 16:12:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-07-10 16:12:03 --> Cart Class Initialized
+DEBUG - 2025-07-10 16:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:12:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:15:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:15:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:16:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:16:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:16:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-07-10 16:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

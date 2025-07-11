@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class ModelPoin extends Model
 {
-    protected $table = 'tbl_poin';
+    protected $table = 'tbl_histori_poin';
     protected $primaryKey = 'id_poin';
     protected $allowedFields = ['id_member', 'total_poin', 'poin_terpakai', 'poin_sisa'];
 
@@ -27,8 +27,8 @@ class ModelPoin extends Model
 
     public function GetAllWithMember()
     {
-        return $this->db->table('tbl_poin')
-            ->join('tbl_member', 'tbl_member.id_member = tbl_poin.id_member', 'left')
+        return $this->db->table('tbl_histori_poin')
+            ->join('tbl_member', 'tbl_member.kode_member = tbl_histori_poin.id_member', 'left')
             ->get()
             ->getResultArray();
     }

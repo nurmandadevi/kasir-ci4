@@ -55,14 +55,34 @@ class ModelTransaksi extends Model
             ->get()
             ->getResultArray();
     }
+    public function getTotalPoinByKodeMember($kode_member)
+    {
+        return $this->db->table('tbl_member')
+            ->select('total_poin, id_member')
+            ->where('kode_member', $kode_member)
+            ->get()
+            ->getRow();
+    }
 
     public function InsertTransaksi($data)
     {
         $this->db->table('tbl_transaksi')->insert($data);
     }
+    public function InsertHistoriPoin($poin)
+    {
+        $this->db->table('tbl_histori_poin')->insert($poin);
+    }
 
     public function InsertRinciTransaksi($data)
     {
+
         $this->db->table('tbl_rinci_transaksi')->insert($data);
+    }
+    public function updatepoin($poin, $kode_member)
+    {
+        $this->db->table('tbl_member')
+            ->where('kode_member', $kode_member)
+            ->set('total_poin', 'total_poin + ' . $poin, false)
+            ->update();
     }
 }

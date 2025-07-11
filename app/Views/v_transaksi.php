@@ -185,7 +185,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                                 <a class="btn btn-flat btn-success" data-toggle="modal" data-target="#pembayaran" onclick="Pembayaran()"><i class="fas fa-cash-register"></i> Pembayaran</a>
                                             </div>
                                         </div>
-                                        <div class="row mt-2">
+                                        <!-- <div class="row mt-2">
                                             <div class="col-2 input-group">
                                                 <input name="kode_member" id="kode_member" class="form-control" placeholder="Kode Member" autocomplete="off">
                                                 <span class="input-group-append">
@@ -199,237 +199,263 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                             </div>
                                             <div class="col-3">
                                                 <input name="nama_member" id="nama_member" class="form-control" placeholder="Nama Member" readonly>
-                                            </div>
-                                        </div>
-                                        <?php echo form_close() ?>
+                                            </div> -->
                                     </div>
+                                    <?php echo form_close() ?>
                                 </div>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <table class="table table-bordered">
-                                            <thead>
-                                                <tr class="text-center">
-                                                    <th>Kode/Barcode</th>
-                                                    <th>Nama Produk</th>
-                                                    <th>Kategori</th>
-                                                    <th>Harga Jual</th>
-                                                    <th width="100px">Qty</th>
-                                                    <th>Total Harga</th>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-12">
+                                    <table class="table table-bordered">
+                                        <thead>
+                                            <tr class="text-center">
+                                                <th>Kode/Barcode</th>
+                                                <th>Nama Produk</th>
+                                                <th>Kategori</th>
+                                                <th>Harga Jual</th>
+                                                <th width="100px">Qty</th>
+                                                <th>Total Harga</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php foreach ($cart as $key => $value) { ?> <tr>
+                                                    <td><?= $value['id'] ?></td>
+                                                    <td><?= $value['name'] ?></td>
+                                                    <td><?= $value['options']['nama_kategori'] ?></td>
+                                                    <td class="text-right">@Rp. <?= number_format($value['price'], 0) ?>,-</td>
+                                                    <td class="text-center"><?= $value['qty'] ?><?= $value['options']['nama_satuan'] ?></td>
+                                                    <td class="text-right">Rp. <?= number_format($value['subtotal']) ?>,-</td>
+                                                    <td class="text-center">
+                                                        <a href="<?= base_url('Transaksi/RemoveItemCart/' . $value['rowid']) ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa-times"></i></a>
+                                                    </td>
                                                 </tr>
-                                            </thead>
-                                            <tbody>
-                                                <?php foreach ($cart as $key => $value) { ?> <tr>
-                                                        <td><?= $value['id'] ?></td>
-                                                        <td><?= $value['name'] ?></td>
-                                                        <td><?= $value['options']['nama_kategori'] ?></td>
-                                                        <td class="text-right">@Rp. <?= number_format($value['price'], 0) ?>,-</td>
-                                                        <td class="text-center"><?= $value['qty'] ?><?= $value['options']['nama_satuan'] ?></td>
-                                                        <td class="text-right">Rp. <?= number_format($value['subtotal']) ?>,-</td>
-                                                        <td class="text-center">
-                                                            <a href="<?= base_url('Transaksi/RemoveItemCart/' . $value['rowid']) ?>" class="btn btn-flat btn-danger btn-sm"><i class="fas fa-times"></i></a>
-                                                        </td>
-                                                    </tr>
-                                                <?php } ?>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                                            <?php } ?>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-lg-12">
-                        <div class="card card-primary card-outline">
-                            <div class="card-header">
-                                <h5 class="card-title m-0"></h5>
-                            </div>
-                            <div class="card-body bg-black color-pallete text-center">
-                                <h1 class="text-warning" id="terbilang"></h1>
-                            </div>
+                <div class="col-lg-12">
+                    <div class="card card-primary card-outline">
+                        <div class="card-header">
+                            <h5 class="card-title m-0"></h5>
+                        </div>
+                        <div class="card-body bg-black color-pallete text-center">
+                            <h1 class="text-warning" id="terbilang"></h1>
                         </div>
                     </div>
+                </div>
 
-                    <div class="col-12">
-                        <?php
-                        if (session()->getFlashdata('pesan')) {
-                            echo '<div class="alert alert-success alert-dismissible">
+                <div class="col-12">
+                    <?php
+                    if (session()->getFlashdata('pesan')) {
+                        echo '<div class="alert alert-success alert-dismissible">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                             <i class="icon fas fa-check"></i>';
-                            echo session()->getFlashdata('pesan');
-                            echo '</div>';
-                        }
-                        ?>
-                    </div>
-                    <!-- /.col-md-6 -->
+                        echo session()->getFlashdata('pesan');
+                        echo '</div>';
+                    }
+                    ?>
                 </div>
-                <!-- /.row -->
+                <!-- /.col-md-6 -->
             </div>
-            <!-- /.content -->
+            <!-- /.row -->
         </div>
-        <!-- /.content-wrapper -->
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
 
-        <!-- /.modal-pencarian produk -->
-        <div class="modal fade" id="cari-produk">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Pencarian Data Produk</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <table id="example1" class="table table-bordered table-striped text-sm">
-                            <thead>
+    <!-- /.modal-pencarian produk -->
+    <div class="modal fade" id="cari-produk">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Pencarian Data Produk</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table id="example1" class="table table-bordered table-striped text-sm">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Kode/Barcode</th>
+                                <th>Nama Produk</th>
+                                <th>Harga Jual</th>
+                                <th>Stok</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $no = 1;
+                            foreach ($produk as $key => $value) { ?>
                                 <tr>
-                                    <th>No</th>
-                                    <th>Kode/Barcode</th>
-                                    <th>Nama Produk</th>
-                                    <th>Harga Jual</th>
-                                    <th>Stok</th>
-                                    <th>Aksi</th>
+                                    <td><?= $no++ ?></td>
+                                    <td><?= $value['kode_produk'] ?></td>
+                                    <td><?= $value['nama_produk'] ?></td>
+                                    <td><?= $value['harga_jual'] ?></td>
+                                    <td><?= $value['stok'] ?></td>
+                                    <td>
+                                        <button onclick="PilihProduk(<?= $value['kode_produk'] ?>)" class="btn btn-success btn-xs">Pilih</button>
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1;
-                                foreach ($produk as $key => $value) { ?>
-                                    <tr>
-                                        <td><?= $no++ ?></td>
-                                        <td><?= $value['kode_produk'] ?></td>
-                                        <td><?= $value['nama_produk'] ?></td>
-                                        <td><?= $value['harga_jual'] ?></td>
-                                        <td><?= $value['stok'] ?></td>
-                                        <td>
-                                            <button onclick="PilihProduk(<?= $value['kode_produk'] ?>)" class="btn btn-success btn-xs">Pilih</button>
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
-                    </div>
+                            <?php } ?>
+                        </tbody>
+                    </table>
                 </div>
-                <!-- /.modal-content -->
             </div>
-            <!-- /.modal-dialog -->
+            <!-- /.modal-content -->
         </div>
-        <!-- /.modal -->
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
 
-        <!-- /.modal-pencarian member -->
-        <div class="modal fade" id="cari-member">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Pencarian Data Member</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <table id="example2" class="table table-bordered table-striped text-sm">
-                            <thead>
+    <!-- /.modal-pencarian member -->
+    <div class="modal fade" id="cari-member-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Pencarian Data Member</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table id="example2" class="table table-bordered table-striped text-sm">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Kode Member</th>
+                                <th>Nama Member</th>
+                                <th>Alamat</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php $no = 1;
+                            foreach ($member as $key => $value) { ?>
                                 <tr>
-                                    <th>No</th>
-                                    <th>Kode Member</th>
-                                    <th>Nama Member</th>
-                                    <th>Alamat</th>
-                                    <th>Aksi</th>
+                                    <td><?= $no++ ?></td>
+                                    <td><?= $value['kode_member'] ?></td>
+                                    <td><?= $value['nama_member'] ?></td>
+                                    <td><?= $value['alamat'] ?></td>
+                                    <td>
+                                        <button onclick="PilihMemberBayar('<?= $value['kode_member'] ?>','<?= $value['nama_member'] ?>')" class="btn btn-success btn-xs">Pilih</button>
+                                    </td>
                                 </tr>
-                            </thead>
-                            <tbody>
-                                <?php $no = 1;
-                                foreach ($member as $key => $value) { ?>
-                                    <tr>
-                                        <td><?= $no++ ?></td>
-                                        <td><?= $value['kode_member'] ?></td>
-                                        <td><?= $value['nama_member'] ?></td>
-                                        <td><?= $value['alamat'] ?></td>
-                                        <td>
-                                            <button onclick="PilihMember('<?= $value['kode_member'] ?>','<?= $value['nama_member'] ?>')" class="btn btn-success btn-xs">Pilih</button>
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
+                            <?php } ?>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <!-- /.modal -->
+
+    <!-- Modal Pembayaran -->
+    <!-- Modal Pembayaran -->
+    <div class="modal fade" id="pembayaran">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Transaksi Pembayaran</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <?php echo form_open('Transaksi/SimpanTransaksi') ?>
+
+                    <div class="form-group">
+                        <label for="">Grand Total</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Rp.</span>
+                            </div>
+                            <input name="grand_total" id="grand_total" value="<?= number_format($grand_total, 0) ?>" class="form-control form-control-lg text-right text-danger" readonly>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Kode Member</label>
+                        <div class="input-group">
+                            <input type="text" name="kode_member" id="kode_member_bayar" class="form-control form-control-lg" autocomplete="off">
+                            <span class="input-group-append">
+                                
+                                    <a onclick="Pembayaranclose()"class="btn btn-primary btn-flat" data-toggle="modal" data-target="#cari-member-modal">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                              
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Nama Member</label>
+                        <input type="text" name="nama_member" id="nama_member_bayar" class="form-control form-control-lg" readonly>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Dibayar</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Rp.</span>
+                            </div>
+                            <input name="dibayar" id="dibayar" class="form-control form-control-lg text-right text-success" autocomplete="off">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Kembalian</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Rp.</span>
+                            </div>
+                            <input name="kembalian" id="kembalian" class="form-control form-control-lg text-right text-primary" readonly>
+                        </div>
                     </div>
                 </div>
-                <!-- /.modal-content -->
-            </div>
-            <!-- /.modal-dialog -->
-        </div>
-        <!-- /.modal -->
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
+                    <button type="button" id="btn-simpan-transaksi" class="btn btn-primary btn-flat">
+                        <i class="fas fa-save"></i> Save Transaksi
+                    </button>
 
-        <!-- Modal Pembayaran -->
-        <div class="modal fade" id="pembayaran">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">Transaksi Pembayaran</h4>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <?php echo form_open('Transaksi/SimpanTransaksi') ?>
-
-                        <div class="form-group">
-                            <label for="">Grand Total</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Rp.</span>
-                                </div>
-                                <input name="grand_total" id="grand_total" value="<?= number_format($grand_total, 0) ?>" class="form-control form-control-lg text-right text-danger" readonly>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="">Dibayar</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Rp.</span>
-                                </div>
-                                <input name="dibayar" id="dibayar" class="form-control form-control-lg text-right text-success" autocomplete="off">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="">Kembalian</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Rp.</span>
-                                </div>
-                                <input name="kembalian" id="kembalian" class="form-control form-control-lg text-right text-primary" readonly>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer justify-content-between">
-                        <button type="button" class="btn btn-default btn-flat" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary btn-flat"><i class="fas fa-save"></i>Save Transaksi</button>
-                    </div>
-                    <?php echo form_close() ?>
                 </div>
-                <!-- /.modal-content -->
+                <?php echo form_close() ?>
             </div>
-            <!-- /.modal-dialog -->
+            <!-- /.modal-content -->
         </div>
-        <!-- /.modal -->
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /.modal -->
+
+    <!-- /.modal -->
 
 
-        <!-- Control Sidebar -->
-        <aside class="control-sidebar control-sidebar-dark">
-            <!-- Control sidebar content goes here -->
-        </aside>
-        <!-- /.control-sidebar -->
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
 
-        <!-- Main Footer -->
-        <footer class="main-footer">
-            <!-- To the right -->
-            <div class="float-right d-none d-sm-inline">
-                Anything you want
-            </div>
-            <!-- Default to the left -->
-            <strong>Copyright &copy; 2025 <a>Hikam Mart</a>.</strong> All rights reserved.
-        </footer>
+    <!-- Main Footer -->
+    <footer class="main-footer">
+        <!-- To the right -->
+        <div class="float-right d-none d-sm-inline">
+            Anything you want
+        </div>
+        <!-- Default to the left -->
+        <strong>Copyright &copy; 2025 <a>Hikam Mart</a>.</strong> All rights reserved.
+    </footer>
     </div>
     <!-- ./wrapper -->
 
@@ -459,6 +485,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 HitungKembalian();
             });
         });
+
+        function PilihMemberBayar(kode_member, nama_member) {
+            $('#pembayaran').modal('show');
+            $('#kode_member_bayar').val(kode_member);
+            $('#nama_member_bayar').val(nama_member);
+            $('#cari-member-modal').modal('hide');
+
+        }
 
         function CekProduk() {
             $.ajax({
@@ -490,17 +524,22 @@ scratch. This page gets rid of all links and provides the needed markup only.
             CekProduk();
         }
 
-        function PilihMember(kode_member, nama_member) {
-            $('#kode_member').val(kode_member);
-            $('#nama_member').val(nama_member);
-            $('#cari-member').modal('hide');
-            CekMember();
-        }
+        // function PilihMember(kode_member, nama_member) {
+        //     $('#kode_member').val(kode_member);
+        //     $('#nama_member').val(nama_member);
+        //     $('#cari-member').modal('hide');
+        //     CekMember();
+        // }
 
+        function Pembayaranclose() {
+            $('#pembayaran').modal('hide');
+        }
 
         function Pembayaran() {
             $('#pembayaran').modal('show');
         }
+
+
 
         new AutoNumeric('#dibayar', {
             digitGroupSeparator: ',',
@@ -599,6 +638,34 @@ scratch. This page gets rid of all links and provides the needed markup only.
             return i;
         }
     </script>
+    <script>
+    $(document).ready(function(){
+        $('#btn-simpan-transaksi').click(function(){
+            let dibayar = $('#dibayar').val().replace(/[^\d]/g, '');
+            let kode_member = $('#kode_member_bayar').val().trim();
+
+            if (dibayar === '' || parseInt(dibayar) === 0) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Peringatan',
+                    text: 'Nominal dibayar tidak boleh kosong atau 0!',
+                });
+            } 
+            else if (kode_member === '' || kode_member === '0') {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Peringatan',
+                    text: 'Kode member tidak boleh kosong atau 0!',
+                });
+            }
+            else {
+                $('form').submit();
+            }
+        });
+    });
+</script>
+
+
 </body>
 
 </html>

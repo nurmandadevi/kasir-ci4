@@ -24,4 +24,11 @@ class ModelMember extends Model
     {
         $this->delete($id);
     }
+    public function TambahPoin($kode_member, $poin)
+    {
+        return $this->db->table('tbl_member')
+            ->where('kode_member', $kode_member)
+            ->set('total_poin', 'total_poin + ' . $poin, false)
+            ->update();
+    }
 }
