@@ -85,4 +85,28 @@ class ModelTransaksi extends Model
             ->set('total_poin', 'total_poin + ' . $poin, false)
             ->update();
     }
+
+    // Method tambahan untuk print nota
+    public function GetTransaksiByNoFaktur($no_faktur)
+    {
+        return $this->db->table('tbl_transaksi')
+            ->select('tbl_transaksi.*, tbl_user.nama_user, tbl_member.nama_member, tbl_member.alamat')
+            ->join('tbl_user', 'tbl_user.id_user = tbl_transaksi.id_user', 'left')
+            ->join('tbl_member', 'tbl_member.kode_member = tbl_transaksi.kode_member', 'left')
+            ->where('tbl_transaksi.no_faktur', $no_faktur)
+            ->get()
+            ->getRowArray();
+    }
+
+    public function GetDetailTransaksiByNoFaktur($no_faktur)
+    {
+        return $this->db->table('tbl_rinci_transaksi')
+            ->select('tbl_rinci_transaksi.*, tbl_produk.nama_produk, tbl_kategori.nama_kategori, tbl_satuan.nama_satuan')
+            ->join('tbl_produk', 'tbl_produk.kode_produk = tbl_rinci_transaksi.kode_produk', 'left')
+            ->join('tbl_kategori', 'tbl_kategori.id_kategori = tbl_produk.id_kategori', 'left')
+            ->join('tbl_satuan', 'tbl_satuan.id_satuan = tbl_produk.id_satuan', 'left')
+            ->where('tbl_rinci_transaksi.no_faktur', $no_faktur)
+            ->get()
+            ->getResultArray();
+    }
 }

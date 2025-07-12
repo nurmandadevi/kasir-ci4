@@ -177,6 +177,43 @@ class Transaksi extends BaseController
         }
         $cart->destroy();
         session()->setFlashdata('pesan', 'Transaksi Berhasil Di Simpan!!');
+        
+        // Redirect ke halaman print nota
+        return redirect()->to(base_url('Transaksi/PrintNota/' . $no_faktur));
+    }
+
+    // Method baru untuk print nota
+    public function PrintNota($no_faktur)
+    {
+        $transaksi = $this->ModelTransaksi->GetTransaksiByNoFaktur($no_faktur);
+        $detail = $this->ModelTransaksi->GetDetailTransaksiByNoFaktur($no_faktur);
+        
+        if (!$transaksi) {
+            session()->setFlashdata('error', 'Transaksi tidak ditemukan!');
+            return redirect()->to(base_url('Transaksi'));
+        }
+
+        $data = [
+            'judul' => 'Print Nota',
+            'transaksi' => $transaksi,
+            'detail' => $detail
+        ];
+
+        return view('v_print_nota', $data);
+    }
+
+    // Method untuk cetak ulang nota
+    public function CetakUlang($no_faktur)
+    {
+        return $this->PrintNota($no_faktur);
+    }
+
+    // Method untuk kembali ke transaksi baru (clear cart)
+    public function TransaksiBaru()
+    {
+        $cart = \Config\Services::cart();
+        $cart->destroy();
+        session()->setFlashdata('pesan', 'Siap untuk transaksi baru!');
         return redirect()->to(base_url('Transaksi'));
     }
 }
